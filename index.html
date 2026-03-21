@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!--Link do CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Parte do Header ( LOGO + BOTÃO )-->
+    <header id="transacao-header-container">
+        <div id="transacao-header">
+            <h1>LOGO</h1>
+            <button id="add-btn">Nova Transação</button>
+        </div>
+    </header>
+
+    <main id="transacao-list-container">
+        <ul id="transacao-list">
+            </ul>
+    </main>
+
+    <div id="fade" class="hide"></div>
+    
+    <!--Caixa de Informações-->
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Nova transação</h2>
+            <button id="close-modal">&times;</button>
+        </div>
+
+        <!--Formulário-->
+        <form id="transacao-form">
+            <input type="text" id="desc" placeholder="Descrição" required>
+            <input type="text" id="valor" placeholder="Preço" required>
+            <input type="text" id="categoria" placeholder="Categoria" required>
+            
+            <div class="transaction-types">
+                <button type="button" class="type-btn">Entrada</button>
+                <button type="button" class="type-btn">Saída</button>
+            </div>
+
+            <button type="submit" id="cadastrar-btn">Cadastrar</button>
+        </form>
+    </div>
+
+    <!--Link do JavaScript-->
+    <script src="javascript.js"></script>
+</body>
+</html>
