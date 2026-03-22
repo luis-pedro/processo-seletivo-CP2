@@ -193,3 +193,87 @@ body{
 #cadastrar-btn:hover {
     filter: brightness(0.9); /*https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/filter-function/brightness*/
 }
+
+
+/*Informações da tela*/
+#transacao-list-container {
+    padding: 0 100px; /*Para alinhar o header ( estava dando probelma )*/
+    margin-top: 2rem;
+}
+
+#transacao-list {
+    list-style: none;
+}
+
+/*Estilo de cada linha*/
+.transacao-item {
+    background-color: #2b2b2e;
+    padding: 1.2rem 2rem;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /*Para aumentar o tamanho da coluna 1*/
+    align-items: center;
+    color: #969cb2;
+}
+
+.transacao-item .titulo {
+    color: #fff;
+}
+
+/*Por algum motivo as cores não estão funcionando*/
+/*
+.valor-entrada { 
+    color: #00b37e; 
+}
+
+.valor-saida { 
+    color: #f75a68; 
+}
+*/
+
+/*Se Deus quiser esse vai funcionar, se não vem e apaga*/
+.valor-entrada { 
+    color: #00b37e; 
+}
+
+.valor-saida { 
+    color: #f75a68; 
+} /*IMPORTANTE: NÃO ESQUECER DE APAGAR*/
+
+/*Estilo dos Cards*/
+#resumo-cards {
+    display: grid; /*Revisar qual display usar*/
+    grid-template-columns: repeat(3, 1fr); /*Define a quantidade de colunas ( Tentar usar depois na logo )*/
+    gap: 2rem; /*Usado para aumentar o tamanho das linhas por conta do display*/
+
+    padding: 0 100px;
+    margin-top: -15px; /*Faz o efeito de sobreposição*/
+}
+
+.card {
+    background: #2b2b2e;
+    color: white;
+
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+}
+
+.card header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card strong {
+    display: block;
+    margin-top: 1rem;
+
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.card.total {
+    background-color: #FAAE2B; /*Único com Fundo diferente*/
+}

@@ -24,22 +24,32 @@ btnNovaTransacao.addEventListener("click", () => {
 
 // 5. Lógica de Cadastrar e exibir na tela
 form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Impede a página de recarregar
+    event.preventDefault(); 
 
-    // Pega os valores digitados
+    // Pega os valores digitados (Adicionamos a categoria aqui)
     const descricao = document.querySelector("#desc").value;
     const valor = document.querySelector("#valor").value;
+    const categoria = document.querySelector("#categoria").value;  // Nova linha
+    const dataAtual = new Date().toLocaleDateString('pt-BR');      // Nova linha
 
-    // Cria um novo item de lista (LI)
+    // Cria o novo item de lista
     const li = document.createElement("li");
-    li.innerHTML = `<span>${descricao}</span> <span>R$ ${valor}</span>`;
     
-    // Adiciona o item na sua lista da tela principal
+    // IMPORTANTE
+    li.className = "transacao-item"; 
+
+    // Isso daqui faz ter 4 colunas ( a antiga não estava funcionando )
+    li.innerHTML = `
+        <span class="titulo">${descricao}</span>
+        <span class="valor-entrada">R$ ${valor}</span>
+        <span>${categoria}</span>
+        <span>${dataAtual}</span>
+    `;
+    
     listaTransacoes.appendChild(li);
 
-    // Fecha a modal e limpa o formulário
-    toggleModal();
-    form.reset();
+    toggleModal(); /*Não esquecer de adicionar o toggleModal porque se não a janela não fecha*/
+    form.reset(); /*Limpa os Inputs do Formulário*/
 
     //Código Funcionando
     //Para continuar revisando - https://www.devmedia.com.br/criando-form-de-contato-com-html5-css3-e-javascript/29415

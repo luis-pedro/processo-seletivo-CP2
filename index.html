@@ -17,9 +17,37 @@
         </div>
     </header>
 
+    <!--Cards de Entrada, Saída e Total-->
+    <!--Tentar deixar a soma dos cards conectada com a lógica do JS para adicionar sozinho-->
+    <section id="resumo-cards">
+        <div class="card">
+            <header>
+                <p>Entradas</p>
+                <span class="icon-up">↑</span>
+            </header>
+            <strong>R$ 0,00</strong>
+        </div>
+
+        <div class="card">
+            <header>
+                <p>Saídas</p>
+                <span class="icon-down">↓</span>
+            </header>
+            <strong>R$ 0,00</strong>
+        </div>
+
+        <div class="card total">
+            <header>
+                <p>Total</p>
+                <span>$</span>
+            </header>
+            <strong>R$ 0,00</strong>
+        </div>
+    </section>
+
+    <!--Informações que serão escritas na tela após o preenchimento do formulário-->
     <main id="transacao-list-container">
-        <ul id="transacao-list">
-            </ul>
+        <ul id="transacao-list"></ul>
     </main>
 
     <div id="fade" class="hide"></div>
